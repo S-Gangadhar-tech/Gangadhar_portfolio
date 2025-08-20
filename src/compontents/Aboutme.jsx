@@ -136,7 +136,7 @@ function Aboutme() {
                                                 whileHover={{ scale: 1.15 }}
                                                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                             >
-                                                <IconComponent className="text-4xl" style={{ color: skillInfo.color }} />
+                                                <IconComponent className="text-4xl" style={{ color:skillName==="GitHub"?"#fff": skillInfo.color }} />
                                                 <p className="mt-2 text-sm text-gray-400 font-medium">{skillName}</p>
                                             </motion.div>
                                         );

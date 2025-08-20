@@ -96,11 +96,11 @@ function Contact() {
                     variants={itemVariants}
                     whileHover={{ scale: 1.03 }}
                 >
-                    <FaGithub className="text-5xl" style={{ color: contactIconsMap.GitHub.color }} />
-                    <div>
-                        <h3 className="text-2xl font-bold text-white mb-1">GitHub</h3>
-                        <p className="text-lg text-gray-300">S-Gangadhar-tech</p>
-                    </div>
+                    <FaGithub className="text-5xl" style={{ color: '#FFFFFF' }} />
+<div>
+    <h3 className="text-2xl font-bold text-white mb-1">GitHub</h3>
+    <p className="text-lg text-gray-300">S-Gangadhar-tech</p>
+</div>
                 </motion.a>
             </motion.div>
         </section>
