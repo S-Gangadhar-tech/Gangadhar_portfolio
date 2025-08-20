@@ -17,7 +17,7 @@ function Projects() {
             title: 'Driver_Locker',
             description: 'A full-stack application that uses an API to accept an area or college name as input and fetch all relevant details about the college, including its location, courses offered, and other key information.',
             date: 'July 2025',
-            liveLink: '#',
+            liveLink: 'https://drivelocker-latest.onrender.com/api/v1.0/swagger-ui/index.html#/',
             githubLink: 'https://github.com/S-Gangadhar-tech/Drive_Locker',
             techStack: ['React.js', 'Spring Boot', 'SQL'],
         },
@@ -25,7 +25,7 @@ function Projects() {
             title: 'NewsPage',
             description: 'A React-based web application that allows users to register, log in, and view personalized news content. It features JWT-based authentication to ensure secure access. Users can customize their news feed based on interests or categories, providing a tailored news-reading experience through a clean and responsive interface.',
             date: 'March 2025',
-            liveLink: '#',
+            // liveLink: '#',
             githubLink: 'https://github.com/S-Gangadhar-tech/NewsPage',
             techStack: ['React.js', 'Backend', 'Database'],
         },
@@ -108,7 +108,7 @@ function Projects() {
                                     </div>
 
                                     <div className="flex flex-wrap gap-4">
-                                        <a
+                                       {project.liveLink && (<a
                                             href={project.liveLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -116,7 +116,7 @@ function Projects() {
                                         >
                                             <FaLaptopCode className="text-xl" />
                                             <span>Live Demo</span>
-                                        </a>
+                                        </a>)}
                                         <a
                                             href={project.githubLink}
                                             target="_blank"

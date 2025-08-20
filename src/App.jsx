@@ -95,18 +95,7 @@ function App() {
                 animate="visible"
                 variants={navVariants}
             >
-                <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-                    {/* Brand Name / Logo */}
-                    <a href="#home" className="text-2xl font-extrabold tracking-wide">
-                        <motion.span
-                            className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-green-600"
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            GANGADHAR
-                        </motion.span>
-                    </a>
-
-                    {/* Desktop Menu */}
+                <div className="container mx-auto px-4 md:px-8 py-4 flex items-center justify-center gap-4">
                     <ul className="hidden md:flex space-x-8 items-center">
                         {navItems.map((item) => (
                             <li key={item.name}>
