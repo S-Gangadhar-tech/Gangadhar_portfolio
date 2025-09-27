@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaGithub, FaReact, FaCode, FaDatabase } from 'react-icons/fa';
+import { FaLaptopCode, FaGithub, FaDatabase, FaCode, FaReact } from 'react-icons/fa';
 import { SiSpringboot } from 'react-icons/si';
 
 const techIconsMap = {
@@ -15,17 +15,20 @@ function Projects() {
     const projectsData = [
         {
             title: 'Driver_Locker',
-            description: 'A full-stack application that uses an API to accept an area or college name as input and fetch all relevant details about the college, including its location, courses offered, and other key information.',
+            description:
+                'A full-stack application that uses an API to accept an area or college name as input and fetch all relevant details about the college, including its location, courses offered, and other key information.',
             date: 'July 2025',
-            liveLink: 'https://drivelocker-latest.onrender.com/api/v1.0/swagger-ui/index.html#/',
+            liveLink: 'https://www.vglabs.online/',
             githubLink: 'https://github.com/S-Gangadhar-tech/Drive_Locker',
+            serverAPI: 'https://api.vglabs.online/api/v1.0/swagger-ui/index.html#/',
+            dockerHub: 'https://hub.docker.com/r/sgangadhartech/drivelocker-server/tags',
             techStack: ['React.js', 'Spring Boot', 'SQL'],
         },
         {
             title: 'NewsPage',
-            description: 'A React-based web application that allows users to register, log in, and view personalized news content. It features JWT-based authentication to ensure secure access. Users can customize their news feed based on interests or categories, providing a tailored news-reading experience through a clean and responsive interface.',
+            description:
+                'A React-based web application that allows users to register, log in, and view personalized news content. It features JWT-based authentication to ensure secure access. Users can customize their news feed based on interests or categories, providing a tailored news-reading experience through a clean and responsive interface.',
             date: 'March 2025',
-            // liveLink: '#',
             githubLink: 'https://github.com/S-Gangadhar-tech/NewsPage',
             techStack: ['React.js', 'Backend', 'Database'],
         },
@@ -33,12 +36,7 @@ function Projects() {
 
     const containerVariants = {
         hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-            },
-        },
+        visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
     };
 
     const itemVariants = {
@@ -73,9 +71,9 @@ function Projects() {
                             className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-blue-500 hover:scale-105"
                             variants={itemVariants}
                             whileHover={{
-                                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+                                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
                                 scale: 1.05,
-                                transition: { duration: 0.3 }
+                                transition: { duration: 0.3 },
                             }}
                         >
                             <div className="flex flex-col justify-between h-full">
@@ -97,10 +95,7 @@ function Projects() {
                                                     key={i}
                                                     className="flex items-center space-x-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors"
                                                 >
-                                                    <IconComponent
-                                                        className="text-2xl"
-                                                        style={{ color: techInfo.color }}
-                                                    />
+                                                    <IconComponent className="text-2xl" style={{ color: techInfo.color }} />
                                                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{techName}</span>
                                                 </div>
                                             );
@@ -108,24 +103,50 @@ function Projects() {
                                     </div>
 
                                     <div className="flex flex-wrap gap-4">
-                                       {project.liveLink && (<a
-                                            href={project.liveLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center space-x-2 px-6 py-3 font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
-                                        >
-                                            <FaLaptopCode className="text-xl" />
-                                            <span>Live Demo</span>
-                                        </a>)}
-                                        <a
-                                            href={project.githubLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center space-x-2 px-6 py-3 font-semibold text-white bg-gray-700 rounded-full hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
-                                        >
-                                            <FaGithub className="text-xl" />
-                                            <span>Source Code</span>
-                                        </a>
+                                        {project.liveLink && (
+                                            <a
+                                                href={project.liveLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center space-x-2 px-6 py-3 font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                                            >
+                                                <FaLaptopCode className="text-xl" />
+                                                <span>Live Demo</span>
+                                            </a>
+                                        )}
+                                        {project.githubLink && (
+                                            <a
+                                                href={project.githubLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center space-x-2 px-6 py-3 font-semibold text-white bg-gray-700 rounded-full hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                                            >
+                                                <FaGithub className="text-xl" />
+                                                <span>Source Code</span>
+                                            </a>
+                                        )}
+                                        {project.serverAPI && (
+                                            <a
+                                                href={project.serverAPI}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center space-x-2 px-6 py-3 font-semibold text-white bg-indigo-500 rounded-full hover:bg-indigo-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                                            >
+                                                <FaCode className="text-xl" />
+                                                <span>Server API</span>
+                                            </a>
+                                        )}
+                                        {project.dockerHub && (
+                                            <a
+                                                href={project.dockerHub}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center space-x-2 px-6 py-3 font-semibold text-white bg-orange-500 rounded-full hover:bg-orange-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                                            >
+                                                <FaDatabase className="text-xl" />
+                                                <span>Docker Hub</span>
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
