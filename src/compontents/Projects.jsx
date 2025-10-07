@@ -1,36 +1,43 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaLaptopCode, FaGithub, FaDatabase, FaCode, FaReact } from 'react-icons/fa';
-import { SiSpringboot } from 'react-icons/si';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+    FaLaptopCode,
+    FaGithub,
+    FaDatabase,
+    FaCode,
+    FaReact,
+} from "react-icons/fa";
+import { SiSpringboot } from "react-icons/si";
 
 const techIconsMap = {
-    'React.js': { icon: FaReact, color: '#61DAFB' },
-    'Spring Boot': { icon: SiSpringboot, color: '#6DB33F' },
-    'SQL': { icon: FaDatabase, color: '#F29111' },
-    'Backend': { icon: FaCode, color: '#3B82F6' },
-    'Database': { icon: FaDatabase, color: '#10B981' },
+    "React.js": { icon: FaReact, color: "#61DAFB" },
+    "Spring Boot": { icon: SiSpringboot, color: "#6DB33F" },
+    SQL: { icon: FaDatabase, color: "#F29111" },
+    Backend: { icon: FaCode, color: "#3B82F6" },
+    Database: { icon: FaDatabase, color: "#10B981" },
 };
 
 function Projects() {
     const projectsData = [
         {
-            title: 'Driver_Locker',
+            title: "Driver_Locker",
             description:
-                'A full-stack application that uses an API to accept an area or college name as input and fetch all relevant details about the college, including its location, courses offered, and other key information.',
-            date: 'July 2025',
-            liveLink: 'https://www.vglabs.online/',
-            githubLink: 'https://github.com/S-Gangadhar-tech/Drive_Locker',
-            serverAPI: 'https://api.vglabs.online/api/v1.0/swagger-ui/index.html#/',
-            dockerPublicImage: 'https://hub.docker.com/r/sgangadhartech/drivelocker-server/tags',
-            techStack: ['React.js', 'Spring Boot', 'SQL'],
+                "A full-stack application that uses an API to accept an area or college name as input and fetch all relevant details about the college, including its location, courses offered, and other key information.",
+            date: "July 2025",
+            liveLink: "https://www.vglabs.online/",
+            githubLink: "https://github.com/S-Gangadhar-tech/Drive_Locker",
+            serverAPI: "https://api.vglabs.online/api/v1.0/swagger-ui/index.html#/",
+            dockerPublicImage:
+                "https://hub.docker.com/r/sgangadhartech/drivelocker-server/tags",
+            techStack: ["React.js", "Spring Boot", "SQL"],
         },
         {
-            title: 'NewsPage',
+            title: "NewsPage",
             description:
-                'A React-based web application that allows users to register, log in, and view personalized news content. It features JWT-based authentication to ensure secure access. Users can customize their news feed based on interests or categories, providing a tailored news-reading experience through a clean and responsive interface.',
-            date: 'March 2025',
-            githubLink: 'https://github.com/S-Gangadhar-tech/NewsPage',
-            techStack: ['React.js', 'Backend', 'Database'],
+                "A React-based web application that allows users to register, log in, and view personalized news content. It features JWT-based authentication to ensure secure access. Users can customize their news feed based on interests or categories, providing a tailored news-reading experience through a clean and responsive interface.",
+            date: "March 2025",
+            githubLink: "https://github.com/S-Gangadhar-tech/NewsPage",
+            techStack: ["React.js", "Backend", "Database"],
         },
     ];
 
@@ -41,11 +48,18 @@ function Projects() {
 
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
-        visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.5, ease: "easeOut" },
+        },
     };
 
     return (
-        <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
+        <section
+            id="projects"
+            className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-500"
+        >
             <div className="container mx-auto px-4">
                 <motion.h2
                     className="text-3xl md:text-5xl font-extrabold text-center mb-10 md:mb-16 text-gray-800 dark:text-white"
@@ -72,19 +86,27 @@ function Projects() {
                             className="p-6 md:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-blue-500 hover:scale-105"
                             variants={itemVariants}
                             whileHover={{
-                                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+                                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
                                 scale: 1.05,
                                 transition: { duration: 0.3 },
                             }}
                         >
                             <div className="flex flex-col justify-between h-full">
                                 <div className="mb-4 md:mb-6">
-                                    <h3 className="text-xl md:text-3xl font-bold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
-                                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-                                    <p className="text-xs md:text-sm font-medium text-gray-500 dark:text-gray-400">Date: {project.date}</p>
+                                    <h3 className="text-xl md:text-3xl font-bold mb-2 text-gray-800 dark:text-white">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-4">
+                                        {project.description}
+                                    </p>
+                                    <p className="text-xs md:text-sm font-medium text-gray-500 dark:text-gray-400">
+                                        Date: {project.date}
+                                    </p>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-base md:text-lg text-gray-700 dark:text-gray-200 mb-3">Tech Stack:</h4>
+                                    <h4 className="font-semibold text-base md:text-lg text-gray-700 dark:text-gray-200 mb-3">
+                                        Tech Stack:
+                                    </h4>
                                     <div className="flex flex-wrap gap-2 md:gap-4 mb-6">
                                         {project.techStack.map((techName, i) => {
                                             const techInfo = techIconsMap[techName];
@@ -95,16 +117,36 @@ function Projects() {
                                                     key={i}
                                                     className="flex items-center space-x-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700"
                                                 >
-                                                    <IconComponent className="text-xl md:text-2xl" style={{ color: techInfo.color }} />
-                                                    <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">{techName}</span>
+                                                    <IconComponent
+                                                        className="text-xl md:text-2xl"
+                                                        style={{ color: techInfo.color }}
+                                                    />
+                                                    <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">
+                                                        {techName}
+                                                    </span>
                                                 </div>
                                             );
                                         })}
                                     </div>
                                     <div className="flex flex-wrap gap-2 md:gap-4">
-                                        <motion.h1 className="w-full block text-4xl md:text-6xl font-extrabold bg-gray-700 p-4 rounded-2xl text-center hover:scale-105 transition-transform duration-300 cursor-pointer select-none">
+                                        <motion.h1
+                                            className="
+    w-full max-w-2xl mx-auto
+    text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl
+    font-extrabold
+    p-3 sm:p-4 md:p-6
+    rounded-2xl
+    text-center
+    text-gray-300
+    hover:scale-105
+    transition-transform duration-300
+    cursor-pointer
+    select-none
+  "
+                                        >
                                             Links
                                         </motion.h1>
+
 
 
                                         {project.liveLink && (
