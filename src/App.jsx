@@ -8,7 +8,7 @@ import Projects from "./compontents/Projects";
 import Experience from './compontents/Experience';
 
 // Import the resume PDF directly. Ensure it's in your src/assets folder.
-import resumePDF from './assets/resume.pdf';
+import resumePDF from './assets/resume';
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
